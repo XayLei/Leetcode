@@ -10,6 +10,6 @@ publlic class solution{
            map.put(nums[i],i);
        }
        
-       throw new IllegalArgumentException("no two sum solution"）;
+       throw new IllegalArgumentException("no two sum solution");
     }
 }
