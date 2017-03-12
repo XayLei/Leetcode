@@ -1,3 +1,6 @@
+/*
+算法理解：利用二分法找两个有序数组合并后的中间数
+*/
 public class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
          if (nums1 == null || nums2 == null) {
