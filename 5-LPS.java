@@ -3,6 +3,7 @@
   算法参考：
          https://segmentfault.com/a/1190000003914228
          http://www.cnblogs.com/grandyang/p/4475985.html
+         https://segmentfault.com/a/1190000002991199#articleHeader5(四种不同的算法)
 */
 public class Solution{
    public String longestPalindrome(String s){
