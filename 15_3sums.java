@@ -1,3 +1,35 @@
+//这个运行速度比下面的更快
+public class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+		Arrays.sort(nums);
+		for(int k =0; k<nums.length; k++){
+			if(nums[k]>0) break;
+            //注意这里，这里是避免重复列表的关键			
+            if(k>0 && nums[k]==nums[k-1]) continue;
+			int target = 0 - nums[k];
+			int i = k+1;
+			int j = nums.length-1;
+			while(i<j){
+				if(nums[i]+nums[j]==target){
+					List<Integer> li = new ArrayList<>();
+					li.add(nums[k]);
+					li.add(nums[i]);
+					li.add(nums[j]);
+					list.add(li);
+                    //这里也是为了避免重复元素					
+                    while(i<j && nums[i]==nums[i+1]) ++i;
+					while(i<j && nums[j]==nums[j-1]) --j;
+					++i;
+					--j;
+				}else if(nums[i]+nums[j] < target) ++i;
+				else --j;
+			}
+		}
+		return list;
+    }
+}
+
 public class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
