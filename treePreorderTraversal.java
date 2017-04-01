@@ -13,7 +13,7 @@ List<Integer> preorderTraversal(TreeNode root){
      List<Integer> result = new ArrayList<>();
      if(root == null) return result;
      
-     result.add(root);
+     result.add(root.val);
      result.addAll(preorderTraversal(root.left));
      result.addAll(preorderTraversal(root.right));
      reutrn result;
@@ -29,7 +29,7 @@ List<Integer> preorderTraversal(TreeNode root){
      stack.push(root);
      while(!stack.isEmpty()){
          TreeNode node = stack.pop();
-         result.add(node);
+         result.add(node.val);
          if(node.right != null){
               stack.push(node.right);
          }
