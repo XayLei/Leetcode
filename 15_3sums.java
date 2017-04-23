@@ -30,6 +30,8 @@ public class Solution {
     }
 }
 
+
+//这是另一种方法
 public class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
