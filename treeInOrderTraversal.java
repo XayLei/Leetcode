@@ -21,6 +21,26 @@ List<Integer> inOrderTraversal(TreeNode root){
      return result;
 }
 
+//A simple Non-Recursive Method
+List<Integer> inOrderTraversal(TreeNode root){
+	List<Integer> result = new ArrayList<>();
+	Stack<TreeNode> stack = new Stack<>();
+	TreeNode cur = root;
+	
+	//当节点不为null，或者是栈不为空时
+	while(cur!=null || !stack.isEmpty()){
+		//循环压入每个节点的左节点
+		while(cur!=null){
+			stack.push(cur);
+			cur = cur.left;
+		}
+		cur = stack.pop();
+		result.add(cur.val);
+		cur = cur.right;
+	}
+	return result;
+}
+
 //Non-Recursive Method
 List<Integer> inOrderTraversal(TreeNode root){
    List<Integer> result = new ArrayList<>();
